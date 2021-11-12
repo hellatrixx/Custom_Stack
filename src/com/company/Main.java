@@ -11,7 +11,7 @@ public class Main {
         Stack newStack = new Stack(maxSize);
        //Matcher looks for patterns in the scanned string (\\n+ is 0-9 with one or more)
         for (int i = 0; i < maxSize; i++) {
-            Matcher m = Pattern.compile("\\d+").matcher(sc.nextLine());
+            Matcher m = Pattern.compile("-?\\d+").matcher(sc.nextLine());
             String group = m.find() ? m.group() : null;
             //if m.find() is true then m.group() runs, if not group is null
             if(group == null) {
